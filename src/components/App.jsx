@@ -1,8 +1,11 @@
 // import "./App.css";
-import { Card } from "./Card";
+// import { useState } from "react";
+// import { Card } from "./Card/Card";
+import { ListOfCards } from "./ListOfCards/ListOfCards";
 
 function App() {
-  return <Card/>
+  // const [users, setUsers] = useState([])
+  return <ListOfCards />
 }
 
 export default App;
