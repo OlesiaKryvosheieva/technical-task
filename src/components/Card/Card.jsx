@@ -56,23 +56,16 @@ export const Card = ({ tweets, followers }) => {
       />
       <p className={css.tweets}> {tweets} TWEETS</p>
       <p className={css.followers}>{followersWithComma} FOLLOWERS</p>
-      {!follow ? (
+      
         <button
           type="button"
-          className={css.followBtn}
+          className={!follow? css.followBtn : css.followingBtn}
           onClick={toggleFollowing}
         >
-          FOLLOW
+          {!follow ? 'FOLLOW' : 'FOLLOWING'}
         </button>
-      ) : (
-        <button
-          type="button"
-          className={css.followingBtn}
-          onClick={toggleFollowing}
-        >
-          FOLLOWING
-        </button>
-      )}
+   
+    
     </div>
   );
 };
