@@ -25,6 +25,27 @@ export const ListOfCards = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
+  // function addFollower() {
+  //   // const state = {followers, follow}
+  //   // localStorage.setItem('state', JSON.stringify(state))
+  //   setNewFollowers((prevState) => prevState + 1);
+  // }
+  // function removeFollower() {
+  //   // const state = {followers, follow}
+  //   // localStorage.setItem('state', JSON.stringify(state))
+  //   setNewFollowers((prevState) => prevState - 1);
+  // }
+
+  // function toggleFollowing() {
+  //   setFollowing(!follow);
+
+  //   if (follow) {
+  //     return removeFollower();
+  //   } else {
+  //     return addFollower();
+  //   }
+  // }
+
   function onLoadMoreClick() {
     const newPage = page + 1;
     setPage(newPage);
@@ -37,8 +58,10 @@ export const ListOfCards = () => {
           return (
             <Card
               key={user.id}
+              url={user.avatar}
               tweets={user.tweets}
               followers={user.followers}
+              id = {user.id}
             />
           );
         })}
