@@ -1,0 +1,16 @@
+.header {
+  padding: 15px 30px;
+  border-bottom: 1px solid grey;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(37, 102, 241);
+  font-weight: 600;
+}

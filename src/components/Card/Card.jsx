@@ -10,12 +10,10 @@ export const Card = ({ id, url, tweets, followers }) => {
   useEffect(() => {
     const newFollow = localStorage.getItem(`btn-${id}`);
     const parsedState = JSON.parse(newFollow);
-   
-    
+
     if (parsedState && parsedState.follow === true) {
       setFollowing(parsedState.follow);
       setNewFollowers(parsedState.updatefollowers);
-      
     }
     if (parsedState && parsedState.follow === false) {
       setFollowing(parsedState.follow);

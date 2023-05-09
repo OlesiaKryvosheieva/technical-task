@@ -61,7 +61,7 @@ export const ListOfCards = () => {
               url={user.avatar}
               tweets={user.tweets}
               followers={user.followers}
-              id = {user.id}
+              id={user.id}
             />
           );
         })}
