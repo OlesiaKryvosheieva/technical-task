@@ -11,7 +11,7 @@ export const ListOfCards = () => {
 
   useEffect(() => {
     async function loadUsers() {
-      const newUsers = await getUsers(page);
+      const newUsers = await getUsers(page).catch((error) => error.message);
       setUsers(() => {
         if (page === 1) {
           return newUsers;
@@ -22,29 +22,9 @@ export const ListOfCards = () => {
     }
 
     loadUsers();
+    // we want to load users only when page changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
-
-  // function addFollower() {
-  //   // const state = {followers, follow}
-  //   // localStorage.setItem('state', JSON.stringify(state))
-  //   setNewFollowers((prevState) => prevState + 1);
-  // }
-  // function removeFollower() {
-  //   // const state = {followers, follow}
-  //   // localStorage.setItem('state', JSON.stringify(state))
-  //   setNewFollowers((prevState) => prevState - 1);
-  // }
-
-  // function toggleFollowing() {
-  //   setFollowing(!follow);
-
-  //   if (follow) {
-  //     return removeFollower();
-  //   } else {
-  //     return addFollower();
-  //   }
-  // }
 
   function onLoadMoreClick() {
     const newPage = page + 1;

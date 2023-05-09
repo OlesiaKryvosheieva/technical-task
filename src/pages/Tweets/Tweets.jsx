@@ -7,7 +7,7 @@ const Tweets = () => {
   return (
     <>
       <div className={css.linkContainer}>
-        {" "}
+        
         <Link to={location.state?.from ?? "/"} className={css.returnLink}>
           Go back
         </Link>
